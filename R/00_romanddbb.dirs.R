@@ -9,7 +9,7 @@ roman_ddbb.phendir <- function()
   nodename <- Sys.info()[["nodename"]]
   
   switch(nodename,
-			'annamiquel-H110M-S2H' = '~/roman_datasets/',
+			'annamiquel-H110M-S2H' = '/home/annamiquel/roman_datasets',
     stop(paste0("`nodemname` (", nodename, ") is unknown")))
 }
 

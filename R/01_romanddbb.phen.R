@@ -16,7 +16,7 @@ roman_ddbb.phen <- function(
 ### arg
   # group <- match.arg(group) 
   
-  if(missing(dir_file) & missing(dir_url)) {
+  if(missing(dir_file)) {
     dir_file <- roman_ddbb.phendir()
 		dir_url <- roman_ddbb.phenurl()[['l_url']]
   }
@@ -30,7 +30,7 @@ roman_ddbb.phen <- function(
   
 
 ### predefined 'locale' config
-	options(datatable.fread.dec.locale = 'en_US.UTF-8')	
+	options(datatable.fread.dec.locale = 'es_ES.UTF-8')	
 
 
 ### read data in 'dat_url'
@@ -42,7 +42,7 @@ roman_ddbb.phen <- function(
 
 ### read data to 'dat_file'
 	dat_file <- list.files(dir_file, pattern = '.csv', recursive = TRUE)
-	dat_imp_file <- lapply(dat_file, fread, sep = ';', dec = ',')
+	dat_imp_file <- lapply(dat_file, fread, sep = ';', dec = ',', na.strings = c('', 'NA'))
 	
 
 ### update 'dat_imp'

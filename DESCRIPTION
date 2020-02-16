@@ -1,0 +1,24 @@
+Package: romanddbb
+Type: Package
+Title: romanddbb
+Version: 2.0
+Date: 2016-21-09
+Authors: Miquel Vazquez Santiago 
+Maintainer: Miquel <penicilliumitalicum@gmail.com>
+Description: an R package to work with Roman databases
+License: GPL (>= 3)
+LazyData: false
+Imports:
+    plyr,
+		tidyverse,
+		rvest
+Suggests:
+    testthat
+Collate:
+    'package.R'
+    '00_romanddbb.dirs.R'
+		'00_romanddbb.urls.R'
+    '01_romanddbb.phen.R'
+		'02_romanddbb.phen.update_url.R'
+		'02_romanddbb.phen.update_file.R'
+RoxygenNote: 7.0.2

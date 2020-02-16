@@ -1,0 +1,8 @@
+*_cache
+*\.html
+*\.pdf
+*\.tiff
+01-plt-retrove/rdata/
+03-agg_adp_epi/rdata/
+04-mon-retrove/rdata/
+06-pfa_fis/rdata/

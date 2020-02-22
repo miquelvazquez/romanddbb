@@ -7,12 +7,10 @@
 roman_ddbb.phenurl <- function()
 {
 	# list of url
-	n_url <- c('url_1', 'url_2')  
+	n_url <- c('url_1')  
 
 	# url
-  l_url <- c(
-		'https://en.wikipedia.org/wiki/List_of_Roman_emperors', 
-		'https://la.wikipedia.org/wiki/Tabula_successionis_provinciarum_Romanarum')
+  l_url <- c('https://la.wikipedia.org/wiki/Tabula_successionis_provinciarum_Romanarum')
 
   # list
   url_ddbb <- list(
@@ -33,8 +31,7 @@ roman_ddbb.l_url.descriptions <- function(url)
 {
 # 'url' list
 	covlist <- list(
-	  url_1 = c('url_1: list of roman emperors'), 
-  	url_2 = c('url_2: list of roman provinces'))
+	  url_1 = c('url_1: list of roman provinces'))
 
 	# select traits
 	  if(!missing(url)) {

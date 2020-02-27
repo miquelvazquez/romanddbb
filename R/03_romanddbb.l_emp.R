@@ -127,7 +127,7 @@ roman_ddbb.l_emp.six <- function()
 	rulers_2 <- c('maximinus_thrax', 'gordian_i', 'gordian_ii', 'pupienus', 'balbinus', 'gordian_iii')
 
   # list
-  rulers <- list(
+  l_six <- list(
     lemp_1 = rulers_1,
 		lemp_2 = rulers_2,
 		succession = c(as.character(roman_ddbb.l_emp.succesion()[rulers_2])))
@@ -143,12 +143,12 @@ roman_ddbb.l_emp.3th_century <- function()
 {
   # lemp
  	rulers_1 <- c('Philip the Arab', 'Decius', 'Hostilian', 'Aemilian', 'Valerian',
-		'Gallienus', 'Claudius II Gothicus', 'Quintillus', 'Aurelian', 'Ulpia Severina', 'Tacitus',
-		'Florianus', 'Probus', 'Carus', 'Numerianus', 'Carinus', 'Philip II', 'Herennius Etruscus', 
+		'Gallienus', 'Claudius Gothicus', 'Quintillus', 'Aurelian', 'Ulpia Severina', 'Tacitus',
+		'Florianus', 'Probus', 'Carus', 'Numerian', 'Carinus', 'Philip II', 'Herennius Etruscus', 
 		'Trebonianus Gallus', 'Volusianus', 'Salonius')
 	rulers_2 <- c('philip_arab', 'decius', 'hostilian', 'aemilian', 'valerian',
 		'gallienus', 'claudius_gothicus', 'quintillus', 'aurelian', 'ulpia_severina', 'tacitus',
-		'florianus', 'probus', 'carus', 'numerianus', 'carinus', 'philip_ii', 'herennius_etruscus', 
+		'florianus', 'probus', 'carus', 'numerian', 'carinus', 'philip_ii', 'herennius_etruscus', 
 		'trebonianus_gallus', 'volusianus', 'salonius')
 
   # list

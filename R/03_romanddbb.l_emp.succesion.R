@@ -76,7 +76,7 @@ roman_ddbb.l_emp.succesion <- function(rulers_2)
     probus = c('[probus] proclaimed emperor by legions from Danubian region'),
 		carus = c('[carus] seized power before or after Probus was murdered'),
 		carinus = c('[carinus] son of Carus'),
-		numerianus = c('[numerianus] son of Carus'),
+		numerian = c('[numerian] son of Carus'),
 
 		# roman_ddbb.l_emp.tetrarchy()
 		# roman_ddbb.l_emp.constantinian()

@@ -11,7 +11,7 @@ roman_ddbb.update.dat_imp_url <- function(
 {
 ### 'ldply()' for 'dat_imp_url[[1]][c(1:13)]'
 	dat_imp_url[[1]] <- ldply(dat_imp_url[[1]][1:13], data.frame)
-
+l
 
 ### update
 	dat_imp_url_1 <- dat_imp_url[[1]] %>%

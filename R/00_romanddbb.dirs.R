@@ -10,6 +10,7 @@ roman_ddbb.phendir <- function()
   
   switch(nodename,
 			'annamiquel-H110M-S2H' = '/home/annamiquel/roman_datasets',
+			'LAPTOP-UJDSJL8E' = '~/roman_datasets',
     stop(paste0("`nodemname` (", nodename, ") is unknown")))
 }
 

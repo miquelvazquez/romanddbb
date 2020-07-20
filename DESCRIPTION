@@ -11,16 +11,13 @@ LazyData: false
 Imports:
     plyr,
 		tidyverse,
-		rvest
 Suggests:
     testthat
 Collate:
     'package.R'
     '00_romanddbb.dirs.R'
-		'00_romanddbb.urls.R'
     '01_romanddbb.phen.R'
-		'02_romanddbb.phen.update_url.R'
 		'02_romanddbb.phen.update_file.R'
 		'03_romanddbb.l_emp.R'
 		'03_romanddbb.l_emp.succesion.R'
-RoxygenNote: 7.0.2
+RoxygenNote: 7.1.1

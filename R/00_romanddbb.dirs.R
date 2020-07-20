@@ -9,8 +9,8 @@ roman_ddbb.phendir <- function()
   nodename <- Sys.info()[["nodename"]]
   
   switch(nodename,
-			'annamiquel-H110M-S2H' = '/home/annamiquel/roman_datasets',
-			'LAPTOP-UJDSJL8E' = '~/roman_datasets',
+			'annamiquel-H110M-S2H' = '/home/annamiquel/git_roman/romanddbb/data',
+			## 'LAPTOP-UJDSJL8E'
     stop(paste0("`nodemname` (", nodename, ") is unknown")))
 }
 
@@ -37,10 +37,9 @@ roman_ddbb.required_packages <- function()
 	### list of packages
 	pacman::p_load(
     tidyverse, lubridate, data.table, testthat, assertthat,
-		rvest, plyr, Hmisc, reshape, viridis, scales, magrittr, gtools,
+		plyr, Hmisc, reshape, viridis, scales, magrittr, gtools,
     gridExtra, rmarkdown, knitr, prettydoc, DT, car,
-    nlme, readxl, tidyr, stringr,
-    janitor, broom, tidymodels, extrafont,
+    nlme, readxl, tidyr, stringr, janitor, broom, tidymodels, extrafont,
     install = TRUE)
 
 if(R.Version()$os == 'linux-gnu') {

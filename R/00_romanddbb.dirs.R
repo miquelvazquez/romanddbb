@@ -7,10 +7,10 @@ roman_ddbb.phendir <- function()
 {
 ### databases from 'datasets'
   nodename <- Sys.info()[["nodename"]]
-  
+
   switch(nodename,
 			'annamiquel-H110M-S2H' = '~/git_roman/romanddbb/data',
-			## 'LAPTOP-UJDSJL8E'
+			'LAPTOP-UJDSJL8E' = '~/git_roman/romanddbb/data',
     stop(paste0("`nodemname` (", nodename, ") is unknown")))
 }
 

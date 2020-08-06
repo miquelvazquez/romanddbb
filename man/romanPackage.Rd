@@ -4,6 +4,3 @@
 \name{romanPackage}
 \alias{romanPackage}
 \title{romanddbb: an R package to work with Roman databases}
-\description{
-romanddbb: an R package to work with Roman databases
-}

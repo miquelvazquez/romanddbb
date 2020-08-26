@@ -5,6 +5,13 @@
 #' @export
 roman_ddbb.phen <- function(
 	dir_file,
+  # group_ddbb = c(
+    # 'amphitheaters'),
+  # dinasty = c(
+    # 'julio_claudian', 'four_emperors', 'flavian', 'ulpia_aelia', 'antonine', 'severan',
+    # 'six_emperors', '3th_century',
+    # 'tetrarchy', 'constantinian', 'valentinian',
+    # 'theodosian', 'western', 'leonid', 'none'),
  	filter)
 {
 ### require enviroments
@@ -35,11 +42,11 @@ roman_ddbb.phen <- function(
 
 
 ### predefined 'locale' config
-	options(datatable.fread.dec.locale = 'es_ES.UTF-8')
+	options(datatable.fread.dec.locale = 'es_ES.UTF-8') ## 'locale' configuration
 
 
 ### read data in 'dat.file'
-  dat_imp <- lapply(
+  dat_list <- lapply(
     dat_file,
     fread,
     sep = ';',
@@ -47,10 +54,18 @@ roman_ddbb.phen <- function(
     na.strings = c('', 'NA'))
 
 
+### double_check #01
+  sum(sapply(lapply(dat_list[1], dim), '[[', 1)) == '109' ## 'dim()' of emperors ddbbd
+  sum(sapply(lapply(dat_list[2:48], dim), '[[', 1)) == '1242' ## 'dim()' of amphitheaters ddbbd
+
+
+### group 'dat_imp' by type of ddbbd
+  dat_imp <- roman_ddbb.update.dat_imp_list(dat_list)
+
 ### update 'dat_imp'
-	## dat_imp_file <- roman_ddbb.update.dat_imp_file(dat_imp_file)
+	dat_imp <- roman_ddbb.update.dat_imp(dat_imp)
 
 
-# return
+### return
 	return(dat_imp)
 }

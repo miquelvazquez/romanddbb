@@ -1,8 +1,8 @@
-#----------------------------------------
-# Update 'dat_imp' in 'romanddbb.phen.R'
-#----------------------------------------
+#-----------------------------------------
+# update 'dat_list' in 'romanddbb.phen.R'
+#-----------------------------------------
 
-### update group 'dat_imp' by type of ddbbd
+### update group 'dat_list' by type of ddbbd--------------------------------------------------------
 
 roman_ddbb.update.dat_imp_list <- function(dat_list)
 {
@@ -13,22 +13,9 @@ roman_ddbb.update.dat_imp_list <- function(dat_list)
 ### redone 'dat_imp'
   dat_imp <- list(dat_list[[1]], dat_amphi_imp)
 
+### avoid rubish elements
+  rm(list = setdiff(ls(), c('dat_imp')))
+
 ### returns
-  return(dat_imp)
-}
-
-
-
-### update amphitheaters ddbb in 'dat_imp[[2]]'
-
-roman_ddbb.update.dat_imp <- function(dat_imp)
-{
-
-
-
-
-
-
-### return
   return(dat_imp)
 }

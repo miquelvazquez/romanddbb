@@ -6,8 +6,8 @@
 roman_ddbb.phen <- function(
 	dir_file,
   # group_ddbb = c(
-    # 'amphitheaters'),
-  # dinasty = c(
+    # 'amphitheaters', 'none'),
+  # dinasty_gr = c(
     # 'julio_claudian', 'four_emperors', 'flavian', 'ulpia_aelia', 'antonine', 'severan',
     # 'six_emperors', '3th_century',
     # 'tetrarchy', 'constantinian', 'valentinian',
@@ -62,8 +62,17 @@ roman_ddbb.phen <- function(
 ### group 'dat_imp' by type of ddbbd
   dat_imp <- roman_ddbb.update.dat_imp_list(dat_list)
 
-### update 'dat_imp'
-	dat_imp <- roman_ddbb.update.dat_imp(dat_imp)
+
+### arguments for 'group_ddbb'
+  if(group_ddbb == 'amphitheaters') {
+    ### argument 'dinasty_gr'
+      if(dinasty_gr != 'none'){
+        ###slice
+      }
+
+  } else if(group_ddbb == 'none' & dinasty_gr == 'none') {
+    ### dat_imp
+  }
 
 
 ### return

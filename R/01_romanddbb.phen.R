@@ -4,15 +4,14 @@
 
 #' @export
 roman_ddbb.phen <- function(
-	dir_file,
-  # group_ddbb = c(
-    # 'amphitheaters', 'none'),
-  # dinasty_gr = c(
-    # 'julio_claudian', 'four_emperors', 'flavian', 'ulpia_aelia', 'antonine', 'severan',
-    # 'six_emperors', '3th_century',
-    # 'tetrarchy', 'constantinian', 'valentinian',
-    # 'theodosian', 'western', 'leonid', 'none'),
- 	filter)
+   group_ddbb = c('amphitheaters', 'none'),
+   emperor_dinasty = c(
+    'julio_claudian', 'four_emperors', 'flavian', 'ulpia_aelia', 'antonine', 'severan',
+    'six_emperors', 'barrack_emperors',
+    'tetrarchy', 'constantinian', 'valentinian',
+    'theodosian', 'western', 'leonid', 'none'),
+ 	filter,
+  dir_file)
 {
 ### require enviroments
 	roman_ddbb.required_packages()
@@ -55,26 +54,21 @@ roman_ddbb.phen <- function(
 
 
 ### double_check #01
-  sum(sapply(lapply(dat_list[1], dim), '[[', 1)) == '109' ## 'dim()' of emperors ddbbd
-  sum(sapply(lapply(dat_list[2:48], dim), '[[', 1)) == '1242' ## 'dim()' of amphitheaters ddbbd
+  ## sum(sapply(lapply(dat_list[1], dim), '[[', 1)) == '109' ## 'dim()' of emperors ddbbd
+  ## sum(sapply(lapply(dat_list[2:48], dim), '[[', 1)) == '1242' ## 'dim()' of amphitheaters ddbbd
 
 
 ### group 'dat_imp' by type of ddbbd
-  dat_imp <- roman_ddbb.update.dat_imp_list(dat_list)
+  dat_imp <- roman_ddbb.update.datimp_list(dat_list)
 
 
 ### arguments for 'group_ddbb'
-  if(group_ddbb == 'amphitheaters') {
-    ### argument 'dinasty_gr'
-      if(dinasty_gr != 'none'){
-        ###slice
-      }
-
-  } else if(group_ddbb == 'none' & dinasty_gr == 'none') {
-    ### dat_imp
-  }
+  dat <- roman_ddbb.update.dat_group_ddbb(
+    dat_imp,
+    group_ddbb,
+    emperor_dinasty)
 
 
 ### return
-	return(dat_imp)
+	return(dat)
 }

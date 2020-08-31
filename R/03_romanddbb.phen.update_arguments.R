@@ -8,7 +8,7 @@
 
 roman_ddbb.update.dat_group_ddbb <- function(
   dat_imp,
-  group_ddbb
+  group_ddbb,
   emperor_dinasty)
 {
 ### create list of 'amphi_dinasty'

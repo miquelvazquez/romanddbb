@@ -4,7 +4,7 @@
 
 #' @export
 roman_ddbb.phen <- function(
-   group_ddbb = c('amphitheaters', 'none'),
+   group_ddbb = c('amphitheaters', 'roman_emperors', 'none'),
    emperor_dinasty = c(
     'julio_claudian', 'four_emperors', 'flavian', 'ulpia_aelia', 'antonine', 'severan',
     'six_emperors', 'barrack_emperors',
@@ -67,6 +67,11 @@ roman_ddbb.phen <- function(
     dat_imp,
     group_ddbb,
     emperor_dinasty)
+
+
+### show data by 'tidyverse'
+  dat <- dat %>%
+    as_tibble()
 
 
 ### return

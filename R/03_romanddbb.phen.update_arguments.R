@@ -1,8 +1,8 @@
-#-------------------------------------------------
+#----------------------------------------
 # modify 'dat_imp' in 'romanddbb.phen.R'
 # argument choise 'group_ddbb'
 # argument choise 'dinasty_gr'
-#-------------------------------------------------
+#----------------------------------------
 
 ### update group 'dat_imp' by argument 'amphitheaters'----------------------------------------------
 
@@ -11,27 +11,42 @@ roman_ddbb.update.dat_group_ddbb <- function(
   group_ddbb,
   emperor_dinasty)
 {
-### create list of 'amphi_dinasty'
+### 'slice()' original 'dat_imp' by 'dimension'
+### choise arguments by 'group_ddbb' & 'dinasty_gr'
 
-  # list of 'amphitheaters' dates
-  l_amphi_republic <- c('republican', 'caesarean')
-  l_amphi_julio <- c(
-    'augustan', 'tiberian', 'caligulan', 'claudian', 'neronian', 'julio_claudian',
-    '1st_century', 'early_1st', 'late_1st')
-  l_amphi_flavian <- c('flavian', '1st_century', 'late_1st')
-  l_amphi_ulpian <- c('ulpio_aelian', 'trajanic', 'hadrianic', '2nd_century', 'early_2nd')
-  l_amphi_antonine <- c('antonine', '2nd_century', 'late_2nd')
-  l_amphi_severan <- c('severan', '2nd_century', 'late_2nd', '3rd_century')
-  l_amphi_barrack <- c('3rd_century', 'late_3rd')
-  l_amphi_tetrarchy <- c('3rd_century', 'late_3rd', '4th_century')
-  l_amphi_rest <- c('principate', 'undated')
+### argument 'amphitheaters' data
+  if(group_ddbb == 'amphitheaters' & !missing(emperor_dinasty)) {
+    ### update
+      dat_1 <- dat_imp[[1]] %>%
+          slice(rep(1:n(), times = dim(dat_imp[[2]])[1]))
+
+      dat_2 <- dat_imp[[2]] %>%
+          slice(rep(1:n(), times = dim(dat_imp[[1]])[1]))
 
 
-###
+    ### 'bind_cols()'
+      dat <- bind_cols(dat_1, dat_2)
 
+
+  } else if(group_ddbb == 'amphitheaters' & emperor_dinasty == 'none') {
+    ### return 'base' data for 'amphitheathers'data
+      dat <- dat_imp[[2]]
+
+
+  } else if(group_ddbb == 'roman_emperors' & emperor_dinasty != 'none') {
+    ### return 'base' data for 'emperor_dinasty'
+      dat <- dat_imp[[1]] %>%
+        filter(across(any_of('dinasty_1'), ~ . %in% emperor_dinasty))
+
+
+  } else if(group_ddbb == 'none' & emperor_dinasty == 'none') {
+    ### return original 'dat_imp' data
+      dat <- dat_imp
+
+  }
 
 ### avoid rubish elements
-  rm(list = setdiff(ls(), c('dat')))
+  rm(list = setdiff(ls(), c('dat', 'dat_imp')))
 
 ### returns
   return(dat_imp)

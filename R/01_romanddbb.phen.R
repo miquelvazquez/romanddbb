@@ -5,11 +5,18 @@
 #' @export
 roman_ddbb.phen <- function(
    group_ddbb = c('amphitheaters', 'roman_emperors', 'none'),
+   amphitheaters_gr = c(
+    'republican', 'caesarean',
+   	'1st_century', 'early_1st', 'late_1st', 
+    'julio_claudian', 'augustan', 'tiberian', 'caligulan', 'claudian', 'neronian', 'flavian',
+    '2nd_century', 'early_2nd', 'late_2nd', 'ulpio_aelian', 'trajanic', 'hadrianic', 'antonine',
+    '3rd_century', 'late_3rd', 'severan', 'principate',
+    '4th_century', 'undated'),     
    emperor_dinasty = c(
     'julio_claudian', 'four_emperors', 'flavian', 'ulpia_aelia', 'antonine', 'severan',
     'six_emperors', 'barrack_emperors',
     'tetrarchy', 'constantinian', 'valentinian',
-    'theodosian', 'western', 'leonid', 'none'),
+    'theodosian', 'western', 'leonid'),
  	filter,
   dir_file)
 {
@@ -53,19 +60,15 @@ roman_ddbb.phen <- function(
     na.strings = c('', 'NA'))
 
 
-### double_check #01
-  ## sum(sapply(lapply(dat_list[1], dim), '[[', 1)) == '109' ## 'dim()' of emperors ddbbd
-  ## sum(sapply(lapply(dat_list[2:48], dim), '[[', 1)) == '1242' ## 'dim()' of amphitheaters ddbbd
-
-
-### group 'dat_imp' by type of ddbbd
+### group 'dat_imp' by type of ddbbd in '02_romanddbb.phen.update_file.R' file
   dat_imp <- roman_ddbb.update.datimp_list(dat_list)
 
 
-### arguments for 'group_ddbb'
+### arguments for 'group_ddbb' in '03_romanddbb.phen.update_arguments.R' file
   dat <- roman_ddbb.update.dat_group_ddbb(
     dat_imp,
     group_ddbb,
+    amphitheaters_gr,
     emperor_dinasty)
 
 

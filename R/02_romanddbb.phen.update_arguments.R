@@ -10,46 +10,43 @@
 ### update group 'dat_imp' by argument 'amphitheaters'----------------------------------------------
 
 roman_ddbb.update.dat_group_ddbb <- function(
-  dat_imp,
+  dt_block,
   group_ddbb,
   amphitheaters_gr,
   emperor_dinasty)
 {
-### description function
-
 
 
 ### argument 'amphitheaters' data
   if(group_ddbb == 'none' & missing(amphitheaters_gr) & missing(emperor_dinasty)) {
     
     ### update
-      dat <- dat_imp
+      dat <- dt_block
 
 
-    ### 'names()'
-      names(dat) <- paste0('emperors_ddbb', 'amphitheaters_ddbb')
-
-
-  } else if(group_ddbb == 'roman_emperors' & missing(amphitheaters_gr) & !missing(emperor_dinasty)) {
+   } else if(group_ddbb == 'roman_emperors' & missing(amphitheaters_gr) & !missing(emperor_dinasty)) {
     
     ### update
-      dat <- dat_imp[[1]] %>%
+      dat <- dt_block$roman_emperors[[1]] %>%
         filter(across(any_of('dinasty_1'), ~ . %in% emperor_dinasty))
 
 
 	} else if(group_ddbb == 'amphitheaters' & !missing(amphitheaters_gr) & missing(emperor_dinasty)) {
 		
 		### update
-			dat <- dat_imp[[2]] %>%
+			dat <- dt_block$amphitheaters %>%
+				bind_rows() %>%
         filter(across(any_of('dinasty_gr'), ~ . %in% amphitheaters_gr))
+
         
   } else if(group_ddbb == 'amphitheaters' & !missing(amphitheaters_gr) & !missing(emperor_dinasty)) {
   
-  	### update
-  		dat <- dat_imp[[2]]
+  	### update 
+  		dat <- dt_block$amphitheaters %>%
+				bind_rows()
   }
 
-
+	
 
 ### avoid rubish elements
   rm(list = setdiff(ls(), c('dat')))

@@ -16,9 +16,10 @@ Suggests:
 Collate:
     'package.R'
     '00_romanddbb.dirs.R'
+		'00_romanddbb.stats_tools.R'
     '01_romanddbb.phen.R'
-		'02_romanddbb.phen.update_file.R'
-    '03_romanddbb.phen.update_arguments.R'
-		'04_romanddbb.l_emp.R'
-		'04_romanddbb.l_emp.succesion.R'
+		'01_00_romanddbb.phen.list_dt_block.R'
+    '02_romanddbb.phen.update_arguments.R'
+		'00_romanddbb.l_emp.R'
+		'00_romanddbb.l_emp.succesion.R'
 RoxygenNote: 7.1.1

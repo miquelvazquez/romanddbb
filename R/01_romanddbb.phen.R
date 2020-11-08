@@ -4,7 +4,7 @@
 
 #' @export
 roman_ddbb.phen <- function(
-   group_ddbb = c('amphitheaters', 'roman_emperors', 'none'),
+   group_ddbb = c('roman_emperors', 'amphitheaters', 'none'),
    amphitheaters_gr = c(
     'republican', 'caesarean',
    	'1st_century', 'early_1st', 'late_1st', 
@@ -18,47 +18,42 @@ roman_ddbb.phen <- function(
     'tetrarchy', 'constantinian', 'valentinian',
     'theodosian', 'western', 'leonid'),
  	filter,
-  dir_file)
+  dir)
 {
+
+### match arguments
+	group_ddbb <- match.arg(group_ddbb)
+	amphitheaters_gr <- match.arg(amphitheaters_gr)
+	emperor_dinasty <- match.arg(emperor_dinasty)
+
+
 ### require enviroments
-	roman_ddbb.required_packages()
+	roman_ddbb.required_packages(
+		locale = 'es_ES.UTF-8')
 
 
-### arg
-  # group <- match.arg(group)
-
-  if(missing(dir_file)) {
-    dir_file <- roman_ddbb.phendir()
-	}
-
-	# double_check
-  	stopifnot(file.exists(dir_file))
-
+### argument #03
   if(!missing(filter)) {
     stopifnot(class(filter) == 'character')
   }
 
 
-### read data to 'dat_file'
-  dat_file <- list.files(
-    dir_file,
-    pattern = '.csv',
-    full.names = TRUE,
-    recursive = TRUE)
+### argument #04
+  if(missing(dir)) {
+    dir <- roman_ddbb.phendir()
+	}
+
+	# double_check #04_01
+  	stopifnot(file.exists(dir))
+
+	
+	# list of files from 'dir'
+		l_files_dt <- roman_ddbb.00_phen.list_dt_block(home_dir = dir)	
 
 
-### predefined 'locale' config
-	options(datatable.fread.dec.locale = 'es_ES.UTF-8') ## 'locale' configuration
-
-
-### read data in 'dat.file'
-  dat_list <- lapply(
-    dat_file,
-    fread,
-    sep = ';',
-    dec = '.',
-    na.strings = c('', 'NA'))
-
+	# read each file in 'l_files_dt'
+		dt_block <- romanddbb.stats.reads_dtblock(l_files = l_files_dt)
+	
 
 ### group 'dat_imp' by type of ddbbd in '02_romanddbb.phen.update_file.R' file
   dat_imp <- roman_ddbb.update.datimp_list(dat_list)

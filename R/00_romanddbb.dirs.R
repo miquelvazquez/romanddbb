@@ -10,7 +10,7 @@ roman_ddbb.phendir <- function()
 
   switch(nodename,
 			'annamiquel-H110M-S2H' = '~/git_roman/romanddbb/data',
-			'LAPTOP-UJDSJL8E' = '~/git_roman/romanddbb/data',
+			'DESKTOP-6P8VLTV' = '~/git_roman/romanddbb/data',
     stop(paste0("`nodemname` (", nodename, ") is unknown")))
 }
 

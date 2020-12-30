@@ -11,20 +11,26 @@ roman_ddbb.phen <- function(
     'julio_claudian', 'augustan', 'tiberian', 'caligulan', 'claudian', 'neronian', 'flavian',
     '2nd_century', 'early_2nd', 'late_2nd', 'ulpio_aelian', 'trajanic', 'hadrianic', 'antonine',
     '3rd_century', 'late_3rd', 'severan', 'principate',
-    '4th_century', 'undated', 'none'),     
+    '4th_century', 'undated', 'none'),   
    emperor_dinasty = c(
-    'julio_claudian', 'four_emperors', 'flavian', 'ulpia_aelia', 'antonine', 'severan',
-    'six_emperors', 'barrack_emperors',
-    'tetrarchy', 'constantinian', 'valentinian',
-    'theodosian', 'western', 'leonid'),
+		'julio_claudian', 
+		'four_emperors', 'flavian',
+		'nerva_antonine', 'ulpia_aelian', 'antonine', 'five_emperors', 'severan',
+		'barrack_emperors', 'gordian', 'dacian', 'caran', 'diarchy', 'tetrarchy',
+    '1st_tetrarchy', '2nd_tetrarchy', '3rd_tetrarchy', '4th_tetrarchy', '5th_tetrarchy', '6th_tetrarchy', 		 			'constantinian', 'valentinian', 'theodosian', 'valerian',
+		'last_emperors', 'leonid', 'no_dinasty', 'none'),
  	filter,
   dir)
 {
 
 ### match arguments
 	gr_ddbb <- match.arg(gr_ddbb)
-	gr_amphitheaters <- match.arg(gr_amphitheaters)
-	emperor_dinasty <- match.arg(emperor_dinasty)
+
+	gr_amphitheaters <- match.arg(
+		gr_amphitheaters, several.ok = TRUE)
+
+	emperor_dinasty <- match.arg(
+		emperor_dinasty, several.ok = TRUE)
 
 
 ### require enviroments
@@ -59,18 +65,29 @@ roman_ddbb.phen <- function(
 
 
 ### arguments
-	if(gr_ddbb == 'amphitheaters' & gr_amphitheaters == 'none') {
+	if (gr_ddbb == 'amphitheaters' & all(gr_amphitheaters == 'none')) {
 				
 		# manage 'data'
 			dat <- l_amphitheathers %>% 
 				bind_rows()
 		
-	} else if (gr_ddbb == 'amphitheaters' & gr_amphitheaters != 'none') {
+	} else if (gr_ddbb == 'amphitheaters' & any(gr_amphitheaters != 'none')) {
 		
 		# manage 'data'
 			dat <- l_amphitheathers %>%
 				bind_rows() %>%
-				filter_at(vars('dinasty_gr'), ~ . %in% gr_amphitheaters)
+				filter_at(vars('dinasty_gr'),  all_vars(. %in% gr_amphitheaters))
+
+	} else if (gr_ddbb == 'roman_emperors' & all(emperor_dinasty == 'none')) {
+	
+		# manage 'data'
+			dat <- l_emperors[[1]]
+			
+	} else if (gr_ddbb == 'roman_emperors' & any(emperor_dinasty != 'none')) {
+
+		# manage 'data'
+			dat <- l_emperors[[1]] %>%
+				filter_at(vars(starts_with('dinasty_')), any_vars(. %in% emperor_dinasty))
 
 	}
 

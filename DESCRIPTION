@@ -1,7 +1,7 @@
 Package: romanddbb
 Type: Package
 Title: romanddbb
-Version: 2.0
+Version: 1.0
 Date: 2016-21-09
 Authors: Miquel Vazquez Santiago
 Maintainer: Miquel <penicilliumitalicum@gmail.com>
@@ -13,13 +13,4 @@ Imports:
 		tidyverse,
 Suggests:
     testthat
-Collate:
-    'package.R'
-    '00_romanddbb.dirs.R'
-		'00_romanddbb.stats_tools.R'
-    '01_romanddbb.phen.R'
-		'01_00_romanddbb.phen.list_dt_block.R'
-    '02_romanddbb.phen.update_arguments.R'
-		'00_romanddbb.l_emp.R'
-		'00_romanddbb.l_emp.succesion.R'
 RoxygenNote: 7.1.1

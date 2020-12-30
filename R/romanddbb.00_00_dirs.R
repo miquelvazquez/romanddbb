@@ -23,7 +23,8 @@ roman_ddbb.phendir <- function()
 
 
 roman_ddbb.required_packages <- function(
-	locale = 'es_ES.UTF-8')
+	locale = 'es_ES.UTF-8',
+	update_packages = FALSE)
 {
 ### predefined 'locale' config
 	options(datatable.fread.dec.locale = 'es_ES.UTF-8') ## 'locale' configuration
@@ -46,9 +47,10 @@ roman_ddbb.required_packages <- function(
 	pacman::p_load(
     tidyverse, lubridate, data.table, testthat, assertthat,
 		plyr, Hmisc, reshape, reshape2, viridis, scales, magrittr, gtools,
-    gridExtra, rmarkdown, knitr, prettydoc, DT, car,
-    nlme, readxl, tidyr, stringr, janitor, broom, extrafont,
-    install = TRUE)
+    rmarkdown, knitr, prettydoc, DT, car,
+    tidyr, stringr, janitor, broom, extrafont,
+    install = TRUE,
+		update = update_packages)
 
 
 ### screen width
@@ -59,22 +61,4 @@ roman_ddbb.required_packages <- function(
 
 ### rm funtions 'R.profile'
 	rm(list = ls(all = TRUE))
-}
-
-
-
-#------------------
-# load theme_set()
-#------------------
-
-roman_ddbb.theme_ggplot_set <- function()
-{
-# setup 'ggplot'
-  theme_set(theme_light() +
-    theme(
-    	legend.position = 'right',
-    	text = element_text(family = 'Georgia'),
-      plot.title = element_text(size = 12, hjust = .5, face = 'bold'),
-      axis.text.x = element_text(size = 9, angle = 45, hjust = .95, vjust = .9),
-      axis.title = element_text(size = 12, face = 'bold')))
 }

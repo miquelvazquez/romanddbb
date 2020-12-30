@@ -4,14 +4,14 @@
 
 #' @export
 roman_ddbb.phen <- function(
-   group_ddbb = c('roman_emperors', 'amphitheaters', 'none'),
-   amphitheaters_gr = c(
+   gr_ddbb = c('roman_emperors', 'amphitheaters', 'none'),
+   gr_amphitheaters = c(
     'republican', 'caesarean',
    	'1st_century', 'early_1st', 'late_1st', 
     'julio_claudian', 'augustan', 'tiberian', 'caligulan', 'claudian', 'neronian', 'flavian',
     '2nd_century', 'early_2nd', 'late_2nd', 'ulpio_aelian', 'trajanic', 'hadrianic', 'antonine',
     '3rd_century', 'late_3rd', 'severan', 'principate',
-    '4th_century', 'undated'),     
+    '4th_century', 'undated', 'none'),     
    emperor_dinasty = c(
     'julio_claudian', 'four_emperors', 'flavian', 'ulpia_aelia', 'antonine', 'severan',
     'six_emperors', 'barrack_emperors',
@@ -22,14 +22,15 @@ roman_ddbb.phen <- function(
 {
 
 ### match arguments
-	group_ddbb <- match.arg(group_ddbb)
-	amphitheaters_gr <- match.arg(amphitheaters_gr)
+	gr_ddbb <- match.arg(gr_ddbb)
+	gr_amphitheaters <- match.arg(gr_amphitheaters)
 	emperor_dinasty <- match.arg(emperor_dinasty)
 
 
 ### require enviroments
 	roman_ddbb.required_packages(
-		locale = 'es_ES.UTF-8')
+		locale = 'es_ES.UTF-8',
+		update_packages = FALSE)
 
 
 ### argument #03
@@ -47,29 +48,36 @@ roman_ddbb.phen <- function(
   	stopifnot(file.exists(dir))
 
 	
-	# list of files from 'dir'
-		l_files_dt <- roman_ddbb.00_phen.list_dt_block(home_dir = dir)	
+### list of files from 'dir'
+	l_files_dt <- roman_ddbb.phen.list_dtblock(home_dir = dir)	
 
 
-	# read each file in 'l_files_dt'
-		dt_block <- romanddbb.stats.reads_dtblock(l_files = l_files_dt)
-	
-
-### group 'dat_imp' by type of ddbbd in '02_romanddbb.phen.update_file.R' file
-  dat_imp <- roman_ddbb.update.datimp_list(dat_list)
+### read all 'ddbb'
+	l_emperors <- romanddbb.phen.reads_dtblock(l_files_dt[['roman_emperors']])
+	l_amphitheathers <- romanddbb.phen.reads_dtblock(l_files_dt[['roman_amphitheaters']])
 
 
-### arguments for 'group_ddbb' in '03_romanddbb.phen.update_arguments.R' file
-  dat <- roman_ddbb.update.dat_group_ddbb(
-    dat_imp,
-    group_ddbb,
-    amphitheaters_gr,
-    emperor_dinasty)
+
+### arguments
+	if(gr_ddbb == 'amphitheaters' & gr_amphitheaters == 'none') {
+				
+		# manage 'data'
+			dat <- l_amphitheathers %>% 
+				bind_rows()
+		
+	} else if (gr_ddbb == 'amphitheaters' & gr_amphitheaters != 'none') {
+		
+		# manage 'data'
+			dat <- l_amphitheathers %>%
+				bind_rows() %>%
+				filter_at(vars('dinasty_gr'), ~ . %in% gr_amphitheaters)
+
+	}
 
 
 ### show data by 'tidyverse'
   dat <- dat %>%
-    as_tibble()
+    as_tibble()	
 
 
 ### return

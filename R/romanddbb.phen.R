@@ -11,7 +11,7 @@ roman_ddbb.phen <- function(
     'julio_claudian', 'augustan', 'tiberian', 'caligulan', 'claudian', 'neronian', 'flavian',
     '2nd_century', 'early_2nd', 'late_2nd', 'ulpio_aelian', 'trajanic', 'hadrianic', 'antonine',
     '3rd_century', 'late_3rd', 'severan', 'principate',
-    '4th_century', 'undated', 'none'),   
+    '4th_century', 'undated', 'none'),  
    emperor_dinasty = c(
 		'julio_claudian', 
 		'four_emperors', 'flavian',

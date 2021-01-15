@@ -84,7 +84,7 @@ roman_ddbb.l_emp.antonine <- function()
 {
   # lemp
   rulers_1 <- c('Antoninus Pius', 'Marcus Aurelius', 'Lucius Verus', 'Commodus')
-	rulers_2 <- c('antoninus_pius', 'marcus_aurelius', 'lucius_verus', 'Commodus')
+	rulers_2 <- c('antoninus_pius', 'marcus_aurelius', 'lucius_verus', 'commodus')
   
 	# list
   l_antonine <- list(

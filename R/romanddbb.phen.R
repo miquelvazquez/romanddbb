@@ -60,21 +60,26 @@ roman_ddbb.phen <- function(
 
 ### read all 'ddbb'
 	l_emperors <- romanddbb.phen.reads_dtblock(l_files_dt[['roman_emperors']])
-	l_amphitheathers <- romanddbb.phen.reads_dtblock(l_files_dt[['roman_amphitheaters']])
+	l_amphitheaters <- romanddbb.phen.reads_dtblock(l_files_dt[['roman_amphitheaters']])
 
+
+
+### update 'l_emperors'
+### update 'l_amphitheathers'
+	l_amphitheaters <- roman_ddbb.phen.update_amphi(l_amphitheaters)
 
 
 ### arguments
 	if (gr_ddbb == 'amphitheaters' & all(gr_amphitheaters == 'none')) {
 				
 		# manage 'data'
-			dat <- l_amphitheathers %>% 
+			dat <- l_amphitheaters %>% 
 				bind_rows()
 		
 	} else if (gr_ddbb == 'amphitheaters' & any(gr_amphitheaters != 'none')) {
 		
 		# manage 'data'
-			dat <- l_amphitheathers %>%
+			dat <- l_amphitheaters %>%
 				bind_rows() %>%
 				filter_at(vars('dinasty_gr'),  all_vars(. %in% gr_amphitheaters))
 

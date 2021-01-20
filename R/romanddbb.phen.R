@@ -66,21 +66,19 @@ roman_ddbb.phen <- function(
 
 ### update 'l_emperors'
 ### update 'l_amphitheathers'
-	l_amphitheaters <- roman_ddbb.phen.update_amphi(l_amphitheaters)
+	df_amphi <- roman_ddbb.phen.update_amphi(l_amphitheaters)
 
 
 ### arguments
 	if (gr_ddbb == 'amphitheaters' & all(gr_amphitheaters == 'none')) {
 				
 		# manage 'data'
-			dat <- l_amphitheaters %>% 
-				bind_rows()
+			dat <- df_amphi
 		
 	} else if (gr_ddbb == 'amphitheaters' & any(gr_amphitheaters != 'none')) {
 		
 		# manage 'data'
-			dat <- l_amphitheaters %>%
-				bind_rows() %>%
+			dat <- df_amphi %>%
 				filter_at(vars('dinasty_gr'),  all_vars(. %in% gr_amphitheaters))
 
 	} else if (gr_ddbb == 'roman_emperors' & all(emperor_dinasty == 'none')) {

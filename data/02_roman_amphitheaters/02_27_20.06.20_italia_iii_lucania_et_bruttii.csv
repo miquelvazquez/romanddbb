@@ -1,0 +1,12 @@
+place;phase;hackett_class;golvin_class;vasa_class;t_building;dinasty_gr;overall_max;overall_min;overall_m2;arena_max;arena_min;arena_m2;cavea_wide;cavea_height;cavea_m2;seat_est;mod_country;lat;long;elevation_m;bib
+grumentum;;italluca#1;#92;italluc#01;amphitheater;augustan;90;70;4948;;;1884.95;;;3063.05;9846;italy;40.2876404;15.9115794;577;2019_hackett
+grumentum;;italluca#1;#92;italluc#01;amphitheater;augustan;90;70;;60;40;;;;3063;;italy;40.2876404;15.9115794;577;2016_stelius
+grumentum;;italluca#1;#92;italluc#01;amphitheater;augustan;90;70;;60;40;;;;;7657;italy;40.2876404;15.9115794;577;2016_sfsheath_com
+paestum;phs_i;italluca#2;;italluc#02;amphitheater;republican;77.3;54.8;3326.97;;;1534.6;;;1792.37;5761;italy;40.422354;15.006449;19;2019_hackett
+paestum;phs_i;italluca#2;;italluc#02;amphitheater;republican;77.3;54.8;;56.9;34.4;;10.2;;;4500;italy;40.422354;15.006449;19;2007_welch
+paestum;phs_i;italluca#2;;italluc#02;amphitheater;republican;77;55;;57;34;;;;1804;;italy;40.422354;15.006449;19;2016_stelius
+paestum;phs_i;italluca#2;;italluc#02;amphitheater;republican;79;59;;56;35;;;;;4500;italy;40.422354;15.006449;19;2016_sfsheath_com
+paestum;phs_ii;italluca#3;;italluc#03;amphitheater;republican;84.9;62.4;4160.85;;;1537.3;;;2623.55;8433;italy;40.422354;15.006449;19;2019_hackett
+paestum;phs_ii;italluca#3;;italluc#03;amphitheater;republican;100;65;;55;45;;;;;;italy;40.422354;15.006449;19;1981_honle
+atina;;;;italluc#04;amphitheater;undated;;;;;;;;;;;italy;;;;2016_stelius
+scolacium;;;;italluc#05;amphitheater;undated;88;64;;;;;;;;;italy;38.806844;16.592275;41;2016_sfsheath_com

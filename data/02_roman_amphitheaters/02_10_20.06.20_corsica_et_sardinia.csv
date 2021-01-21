@@ -1,0 +1,12 @@
+place;phase;hackett_class;golvin_class;vasa_class;t_building;dinasty_gr;overall_max;overall_min;overall_m2;arena_max;arena_min;arena_m2;cavea_wide;cavea_height;cavea_m2;seat_est;mod_country;lat;long;elevation_m;bib
+aleria;;cor#1;#131;cors#01;amphitheater;3rd_century;40;34;;30;24;;;;503;;france;42.100889;9.5102;45;2016_stelius
+aleria;;cor#1;#131;cors#01;amphitheater;3rd_century;39.6;34;1057.46;;;557.94;;;499.52;1606;france;42.100889;9.5102;45;2019_hackett
+aleria;;cor#1;#131;cors#01;amphitheater;3rd_century;39.6;34;;29.6;24;;;;;1200;france;42.100889;9.5102;45;2016_sfsheath_com
+carales;;sard#1;#182;sard#01;amphitheater;2nd_century;92.8;79.2;5772.48;;;1220.32;;;4552.16;;italy;39.223908;9.113228;49;2019_hackett
+carales;;sard#1;#182;sard#01;amphitheater;2nd_century;93;79;;47;33;;;;4552;;italy;39.223908;9.113228;49;2016_stelius
+carales;;sard#1;#182;sard#01;amphitheater;2nd_century;92.8;79.2;;46.8;33.2;;;;;12283;italy;39.223908;9.113228;49;2016_sfsheath_com
+carales;;sard#1;#182;sard#01;amphitheater;2nd_century;88.5;72.5;;46.8;31.2;;;;;;italy;39.223908;9.113228;49;2011_amphitheatrum_de
+carales;;sard#1;#182;sard#01;amphitheater;2nd_century;92.8;79.2;;46.3;33.2;;;;;;italy;39.223908;9.113228;49;2011_amphitheatrum_de
+carales;;sard#1;#182;sard#01;amphitheater;2nd_century;;;;46.2;31;;;;;;italy;39.223908;9.113228;49;2011_amphitheatrum_de
+forum_traiani;;;;sard#02;amphitheater;1st_century;;;;;;;;;;;italy;39.993171;8.804698;47;2016_sfsheath_com
+tharros;;;;sard#03;amphitheater;principate;50;46;;32;32;;;;;;italy;39.876577;8.440713;26;2016_sfsheath_com

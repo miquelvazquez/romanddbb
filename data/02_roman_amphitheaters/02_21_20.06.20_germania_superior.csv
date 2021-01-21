@@ -1,0 +1,41 @@
+place;phase;hackett_class;golvin_class;vasa_class;t_building;dinasty_gr;overall_max;overall_min;overall_m2;arena_max;arena_min;arena_m2;cavea_wide;cavea_height;cavea_m2;seat_est;mod_country;lat;long;elevation_m;bib
+arnsburg;;gersup#1;;gersup#01;amphitheater;principate;;;;32;31;;;;;;germany;50.486031;8.787953;160;2009_sommer
+arnsburg;;gersup#1;;gersup#01;amphitheater;principate;;;;32;31;779.11;;;;;germany;50.486031;8.787953;160;2019_hackett
+augusta_raurica_i;;gersup#2;#29;gersup#02;amphitheater;neronian;81;68;4325.97;;;1385.44;;;2940.53;9452;switzerland ;47.529294;7.72061;282;2019_hackett
+augusta_raurica_i;;gersup#2;#29;gersup#02;amphitheater;neronian;81;68;;;;;;;;;switzerland ;47.529294;7.72061;282;2016_stelius
+augusta_raurica_i;;gersup#2;#29;gersup#02;amphitheater;neronian;81;68;;;;;;;;;switzerland ;47.529294;7.72061;282;1993_golvin
+augusta_raurica_ii;;gersup#3;;gersup#03;amphitheater;neronian;102;87;6969.62;;;1326.55;;;5643.07;18138;switzerland ;47.529294;7.72061;282;2019_hackett
+augusta_raurica_ii;;gersup#3;;gersup#03;amphitheater;neronian;102;87;;48;33;;;;5726;;switzerland ;47.529294;7.72061;282;2016_stelius
+augusta_raurica_ii;;gersup#3;;gersup#03;amphitheater;neronian;102;87;;48;33;;;;;14313;switzerland ;47.529294;7.72061;282;2016_sfsheath_com
+aventicum;phs_i;gersup#4;;gersup#04;amphitheater;hadrian;99;87;6764.63;;;1562.15;;;5202.48;16722;switzerland ;46.8809917;7.0426222;472;2019_hackett
+aventicum;phs_i;gersup#4;;gersup#04;amphitheater;hadrian;99;87;;51;39;;;;5202;;switzerland ;46.8809917;7.0426222;472;2016_stelius
+aventicum;phs_i;gersup#4;;gersup#04;amphitheater;hadrian;99;86;;52;38;;;;;9000;switzerland ;46.8809917;7.0426222;472;2020_wikipedia_fr
+aventicum;phs_ii;gersup#4;;gersup#04;amphitheater;hadrian;115;87;;;;;;;;;switzerland ;46.8809917;7.0426222;472;1981_benario
+aventicum;phs_ii;gersup#4;;gersup#04;amphitheater;hadrian;105;92;;51.5;38.5;;;;;;switzerland ;46.8809917;7.0426222;472;2011_amphitheatrum_de
+aventicum;phs_ii;gersup#4;;gersup#04;amphitheater;hadrian;105;92;;52;38;;;;;16000;switzerland ;46.8809917;7.0426222;472;2020_wikipedia_fr
+bremodorum_bern;;gersup#5;#42;gersup#05;amphitheater;late_1st;42.6;38.5;1288.13;;;509.4;;;778.73;2503;switzerland ;46.97574;7.45115;547;2019_hackett
+bremodorum_bern;;gersup#5;#42;gersup#05;amphitheater;late_1st;;;;27;25;;;;;1500;switzerland ;46.97574;7.45115;547;2011_amphitheatrum_de
+bremodorum_bern;;gersup#5;#42;gersup#13;amphitheater;late_1st;42.6;38.5;;27.6;23.5;;;;;1946;switzerland ;46.97574;7.45115;547;2016_sfsheath_com
+bremodorum_bern;;gersup#5;#42;gersup#13;amphitheater;late_1st;43;39;;28;24;;;;789;;switzerland ;46.97574;7.45115;547;2016_stelius
+burladingen;;gersup#6;;gersup#06;amphitheater;undated;40.5;39;1240.53;;;;;;;;germany;;;;2019_hackett
+burladingen;;gersup#6;;gersup#06;amphitheater;undated;;;;40.5;39;;;;;;germany;;;;2009_sommer
+octodurus;;gersup#8;;gersup#08;amphitheater;claudian;118;106;9823.76;;;3603.4;;;6220.36;19994;switzerland ;46.094354;7.073432;482;2019_hackett
+octodurus;;gersup#8;;gersup#08;amphitheater;claudian;118;106;;74;62;;;;6220;;switzerland ;46.094354;7.073432;482;2016_stelius
+octodurus;;gersup#8;;gersup#08;amphitheater;claudian;76;64;;64;46;;;;;5000;switzerland ;46.094354;7.073432;482;2020_wikipedia_fr
+vesontius;;gersup#9;;gersup#09;amphitheater;late_1st;110;84.6;7308.91;;;1782.22;;;5526.69;17764;france;47.239027;6.015942;244;2019_hackett
+vesontius;;gersup#9;;gersup#09;amphitheater;late_1st;100;85;;62;37;;;;;;france;47.239027;6.015942;244;2016_stelius
+vesontius;;gersup#9;;gersup#09;amphitheater;late_1st;110;85;;62;37;;;;;13816;france;47.239027;6.015942;244;2016_sfsheath_com
+vesontius;;gersup#9;;gersup#09;amphitheater;late_1st;130;106;;;;;;;;24000;france;47.239027;6.015942;244;2020_wikipedia_fr
+vesontius;;gersup#9;;gersup#09;amphitheater;late_1st;122;104;;;;;;;;20000;france;47.239027;6.015942;244;2020_wikipedia_fr
+vindonissa;;gersup#10;;gersup#10;amphitheater;tiberian;95;80;;73;58;;;;;9000;switzerland ;47.47629;8.213605;356;2020_wikipedia_de
+vindonissa;;gersup#10;#17;gersup#10;amphitheater;tiberian;112;98;8620.53;;;2563.53;;;6057;19469;switzerland ;47.47629;8.213605;356;2019_hackett
+vindonissa;;gersup#10;#17;gersup#10;amphitheater;tiberian;112;98;;64;51;;;;6057;;switzerland ;47.47629;8.213605;356;2016_stelius
+vindonissa;;gersup#10;#17;gersup#10;amphitheater;tiberian;112;98;;64;51;;;;;;switzerland ;47.47629;8.213605;356;1981_benario
+vindonissa;;gersup#10;#17;gersup#10;amphitheater;tiberian;112;98;;64;51;;;;;15142;switzerland ;47.47629;8.213605;356;2016_sfsheath_com
+vindonissa;;gersup#10;#17;gersup#10;amphitheater;tiberian;111;99;;64;52;;;;;11000;switzerland ;47.47629;8.213605;356;2020_wikipedia_de
+zugmantel_i;;gersup#11;;gersup#11;amphitheater;undated;;;;26;26;530.92;;;;;germany;50.192103;8.202461;466;2009_sommer
+zugmantel_i;;gersup#11;;gersup#11;amphitheater;undated;;;;26;26;;;;;;germany;50.192103;8.202461;466;2016_stelius
+zugmantel_ii;;;;gersup#12;amphitheater;undated;;;;21.7;21.7;;;;;;germany;50.192103;8.202461;466;2009_sommer
+zugmantel_ii;;;;gersup#12;amphitheater;undated;;;;22;22;;;;;;germany;50.192103;8.202461;466;2016_stelius
+zugmantel_ii;;;;gersup#12;amphitheater;undated;;50;50;21.7;21.7;;;;;;germany;50.192103;8.202461;466;2011_amphitheatrum_de
+noviodunum ;;;;gersup#13;amphitheater;principate;;;;50;36;;;;;;switzerland ;46.383464;6.241301;388;1999_hauser

@@ -1,0 +1,12 @@
+place;phase;hackett_class;golvin_class;vasa_class;t_building;dinasty_gr;overall_max;overall_min;overall_m2;arena_max;arena_min;arena_m2;cavea_wide;cavea_height;cavea_m2;seat_est;mod_country;lat;long;elevation_m;bib
+pergamum;;;;asia#01;amphitheater;2nd_century;136.2;128.1;;51;37;;;;;;turkey;39.125751;27.174177;100;1981_benario
+pergamum;;;;asia#01;amphitheater;2nd_century;136.2;107.4;;51;37;;;;;;turkey;39.125751;27.174177;100;2009_dodge
+pergamum;;;;asia#01;amphitheater;2nd_century;136.2;107.4;;53;37;;;;;23016;turkey;39.125751;27.174177;100;2016_sfsheath_com
+pergamum;;;;asia#01;amphitheater;2nd_century;132;;;;;;;;;;turkey;39.125751;27.174177;100;2011_amphitheatrum_de
+cyzicus;;;;asia#02;amphitheater;prinicipate;150;100;;;;;;;;;turkey;40.398213;27.884552;46;2009_dodge
+cyzicus;;;;asia#02;amphitheater;prinicipate;150;100;;;;;;;;;turkey;40.398213;27.884552;46;2016_sfsheath_com
+cyzicus;;;;asia#02;amphitheater;prinicipate;150;;;;;;;;;;turkey;40.398213;27.884552;46;1981_benario
+aphrodisias;;;;asia#03;arena_stadium;4th_century;59;30;;;;;;;;;turkey;37.712553;28.723061;526;2016_sfsheath_com
+aphrodisias;;;;asia#03;arena_stadium;4th_century;59;31;;;;;;;;;turkey;37.712553;28.723061;526;1998_welch
+symrna_izmir;;;;asia#04;amphitheater;undated;;;;;;;;;;16000;turkey;;;;2011_amphitheatrum_de
+nysia_ad_maeandrum;;;;asia#05;amphitheater;augustan;;;;;;;;;;;turkey;;;;2009_dodge

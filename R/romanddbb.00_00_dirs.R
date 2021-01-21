@@ -46,9 +46,10 @@ roman_ddbb.required_packages <- function(
 ### list of packages
 	pacman::p_load(
     tidyverse, lubridate, data.table, testthat, assertthat,
-		plyr, Hmisc, reshape, reshape2, viridis, scales, magrittr, gtools,
+		plyr, Hmisc, reshape, reshape2, scales, magrittr, gtools,
     rmarkdown, knitr, prettydoc, DT, car,
     tidyr, stringr, janitor, broom, extrafont,
+		viridis,
     install = TRUE,
 		update = update_packages)
 

@@ -5,14 +5,13 @@ R package to work with Roman databases
 
 # romanddbb package structure
 
-* structure of the `romanddbb` package (see [`01_romanddbb_r_package.md`](https://github.com/malimmuno-stats/romanddbb/blob/master/01_romanddbb_r_structure.md)).
+structure of the `romanddbb` package shows 7 common folder `R` package run to `devtools` library.
 
-* the `R` folder manage (see [`02_chmi_r_folder.md`](https://github.com/malimmuno-stats/romanddbb/blob/master/00_chmi_r_readme.md)).
-   + the `chmi.phen()` in the `chmitools` package.
-   + the `R functions` to obtain results in the `chmiddbb` package.
-   + the `R functions` to double check the `chmiddbb` job.
+* the `DESCRIPTION` file defines how `romanddbb` will works with other `R` packages. 
+* the `R` folder manages all the code in the `romanddbb` (see ).
+* 
 
 
 ## session info
 
-* the `sessionInfo()` in `R 4.0.3` is detailled in [`00_romanddbb_sessioninfo.md`](https://github.com/malimmuno-stats/chmiddbb/blob/master/00_chmi_sessioninfo.md) file.
+* the `devtools::session_info()` in `R 4.0.3` is detailled in [`00_romanddbb_sessioninfo.md`](https://github.com/malimmuno-stats/chmiddbb/blob/master/00_chmi_sessioninfo.md) file.
